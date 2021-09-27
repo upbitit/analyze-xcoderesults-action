@@ -63,6 +63,7 @@ async function run(): Promise<void> {
     }
     await octokit.checks.create(checkInfo)
     core.debug(`Done`)
+    core.setOutput('testFailures', output.annotations)
   } catch (error) {
     core.setFailed(error.message)
   }

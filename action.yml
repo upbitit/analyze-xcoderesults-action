@@ -40,6 +40,9 @@ inputs:
     required: true
     description: "Print a summary of all tasks"
     default: "true"
+outputs:
+  testFailures:
+    description: "Test Failure Annotations"
 runs:
   using: 'node12'
   main: 'dist/index.js'
